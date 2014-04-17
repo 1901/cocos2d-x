@@ -656,12 +656,6 @@
     <ClCompile Include="ccUtils.cpp" />
     <ClCompile Include="CCVertex.cpp" />
     <ClCompile Include="cocos2d.cpp" />
-    <ClCompile Include="pch.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-    </ClCompile>
     <ClCompile Include="platform\CCGLViewProtocol.cpp" />
     <ClCompile Include="platform\CCFileUtils.cpp" />
     <ClCompile Include="platform\CCImage.cpp" />
@@ -849,23 +843,7 @@
     <ClInclude Include="CCScheduler.h" />
     <ClInclude Include="CCScriptSupport.h" />
     <ClInclude Include="CCShaderCache.h" />
-    <ClInclude Include="ccShaderEx_SwitchMask_frag.h" />
     <ClInclude Include="ccShaders.h" />
-    <ClInclude Include="ccShader_PositionColorLengthTexture_frag.h" />
-    <ClInclude Include="ccShader_PositionColorLengthTexture_vert.h" />
-    <ClInclude Include="ccShader_PositionColor_frag.h" />
-    <ClInclude Include="ccShader_PositionColor_vert.h" />
-    <ClInclude Include="ccShader_PositionTextureA8Color_frag.h" />
-    <ClInclude Include="ccShader_PositionTextureA8Color_vert.h" />
-    <ClInclude Include="ccShader_PositionTextureColorAlphaTest_frag.h" />
-    <ClInclude Include="ccShader_PositionTextureColor_frag.h" />
-    <ClInclude Include="ccShader_PositionTextureColor_vert.h" />
-    <ClInclude Include="ccShader_PositionTexture_frag.h" />
-    <ClInclude Include="ccShader_PositionTexture_uColor_frag.h" />
-    <ClInclude Include="ccShader_PositionTexture_uColor_vert.h" />
-    <ClInclude Include="ccShader_PositionTexture_vert.h" />
-    <ClInclude Include="ccShader_Position_uColor_frag.h" />
-    <ClInclude Include="ccShader_Position_uColor_vert.h" />
     <ClInclude Include="CCSprite.h" />
     <ClInclude Include="CCSpriteBatchNode.h" />
     <ClInclude Include="CCSpriteFrame.h" />
@@ -890,7 +868,6 @@
     <ClInclude Include="ccUtils.h" />
     <ClInclude Include="CCVertex.h" />
     <ClInclude Include="cocos2d.h" />
-    <ClInclude Include="pch.h" />
     <ClInclude Include="platform\CCApplicationProtocol.h" />
     <ClInclude Include="platform\CCCommon.h" />
     <ClInclude Include="platform\CCDevice.h" />

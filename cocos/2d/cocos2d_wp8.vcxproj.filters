@@ -619,7 +619,6 @@
     <ClCompile Include="platform\winrt\InputEvent.cpp">
       <Filter>platform\winrt</Filter>
     </ClCompile>
-    <ClCompile Include="pch.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\physics\CCPhysicsBody.h">
@@ -865,51 +864,6 @@
     <ClInclude Include="..\base\s3tc.h">
       <Filter>platform</Filter>
     </ClInclude>
-    <ClInclude Include="ccShader_Position_uColor_frag.h">
-      <Filter>shaders</Filter>
-    </ClInclude>
-    <ClInclude Include="ccShader_Position_uColor_vert.h">
-      <Filter>shaders</Filter>
-    </ClInclude>
-    <ClInclude Include="ccShader_PositionColor_frag.h">
-      <Filter>shaders</Filter>
-    </ClInclude>
-    <ClInclude Include="ccShader_PositionColor_vert.h">
-      <Filter>shaders</Filter>
-    </ClInclude>
-    <ClInclude Include="ccShader_PositionColorLengthTexture_frag.h">
-      <Filter>shaders</Filter>
-    </ClInclude>
-    <ClInclude Include="ccShader_PositionColorLengthTexture_vert.h">
-      <Filter>shaders</Filter>
-    </ClInclude>
-    <ClInclude Include="ccShader_PositionTexture_frag.h">
-      <Filter>shaders</Filter>
-    </ClInclude>
-    <ClInclude Include="ccShader_PositionTexture_uColor_frag.h">
-      <Filter>shaders</Filter>
-    </ClInclude>
-    <ClInclude Include="ccShader_PositionTexture_uColor_vert.h">
-      <Filter>shaders</Filter>
-    </ClInclude>
-    <ClInclude Include="ccShader_PositionTexture_vert.h">
-      <Filter>shaders</Filter>
-    </ClInclude>
-    <ClInclude Include="ccShader_PositionTextureA8Color_frag.h">
-      <Filter>shaders</Filter>
-    </ClInclude>
-    <ClInclude Include="ccShader_PositionTextureA8Color_vert.h">
-      <Filter>shaders</Filter>
-    </ClInclude>
-    <ClInclude Include="ccShader_PositionTextureColor_frag.h">
-      <Filter>shaders</Filter>
-    </ClInclude>
-    <ClInclude Include="ccShader_PositionTextureColor_vert.h">
-      <Filter>shaders</Filter>
-    </ClInclude>
-    <ClInclude Include="ccShader_PositionTextureColorAlphaTest_frag.h">
-      <Filter>shaders</Filter>
-    </ClInclude>
     <ClInclude Include="CCGLProgram.h">
       <Filter>shaders</Filter>
     </ClInclude>
@@ -917,9 +871,6 @@
       <Filter>shaders</Filter>
     </ClInclude>
     <ClInclude Include="CCShaderCache.h">
-      <Filter>shaders</Filter>
-    </ClInclude>
-    <ClInclude Include="ccShaderEx_SwitchMask_frag.h">
       <Filter>shaders</Filter>
     </ClInclude>
     <ClInclude Include="ccShaders.h">
@@ -1257,6 +1208,5 @@
     <ClInclude Include="platform\winrt\InputEventTypes.h">
       <Filter>platform\winrt</Filter>
     </ClInclude>
-    <ClInclude Include="pch.h" />
   </ItemGroup>
 </Project>
