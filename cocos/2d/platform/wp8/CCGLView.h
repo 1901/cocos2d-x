@@ -30,15 +30,19 @@ THE SOFTWARE.
 #include "platform/CCCommon.h"
 #include "CCGeometry.h"
 #include "platform/CCGLViewProtocol.h"
+#include "InputEvent.h"
+
+
 #include <agile.h>
 
 #include <wrl/client.h>
 #include <d3d11_1.h>
+#include <mutex>
+#include <queue>
 
 #include <agile.h>
 #include <DirectXMath.h>
 #include "kazmath/mat4.h"
-#include "../wp8-xaml/cpp/InputEvent.h"
 
 #include <EGL/egl.h>
 
@@ -84,6 +88,10 @@ public:
 	void OnResuming(Platform::Object^ sender, Platform::Object^ args);
 	void OnSuspending(Platform::Object^ sender, Windows::ApplicationModel::SuspendingEventArgs^ args);
     
+    void QueueBackKeyPress();
+    void QueuePointerEvent(PointerEventType type, Windows::UI::Core::PointerEventArgs^ args);
+    void GLView::QueueEvent(std::shared_ptr<InputEvent>& event);
+
     void SetXamlEventDelegate(PhoneDirect3DXamlAppComponent::Cocos2dEventDelegate^ delegate) { m_delegate = delegate; };
     void SetXamlMessageBoxDelegate(PhoneDirect3DXamlAppComponent::Cocos2dMessageBoxDelegate^ delegate) { m_messageBoxDelegate = delegate; };
     void SetXamlEditBoxDelegate(PhoneDirect3DXamlAppComponent::Cocos2dEditBoxDelegate^ delegate) { m_editBoxDelegate = delegate; };
@@ -107,6 +115,11 @@ public:
     @brief    get the shared main open gl window
     */
 	static GLView* sharedOpenGLView();
+
+    void ProcessEvents();
+    void AddPointerEvent(PointerEventType type, Windows::UI::Core::PointerEventArgs^ args);
+
+
 
 protected:
     GLView();
@@ -165,6 +178,10 @@ private:
     PhoneDirect3DXamlAppComponent::Cocos2dEventDelegate^ m_delegate;
     PhoneDirect3DXamlAppComponent::Cocos2dMessageBoxDelegate^ m_messageBoxDelegate;
     PhoneDirect3DXamlAppComponent::Cocos2dEditBoxDelegate^ m_editBoxDelegate;
+
+    std::queue<std::shared_ptr<InputEvent>> mInputEvents;
+    std::mutex mMutex;
+
 };
 
 NS_CC_END

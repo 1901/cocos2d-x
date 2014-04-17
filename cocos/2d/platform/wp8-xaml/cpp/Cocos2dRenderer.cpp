@@ -132,28 +132,12 @@ bool Cocos2dRenderer::OnRender()
     return false;
 }
 
-void Cocos2dRenderer::OnPointerPressed(PointerEventArgs^ args)
-{
-    GLView::sharedOpenGLView()->OnPointerPressed(args);
-}
-
-void Cocos2dRenderer::OnPointerMoved(PointerEventArgs^ args)
-{
-    GLView::sharedOpenGLView()->OnPointerMoved(args);
-}
-
-void Cocos2dRenderer::OnPointerReleased(PointerEventArgs^ args)
-{
-    GLView::sharedOpenGLView()->OnPointerReleased(args);
-}
-
 void Cocos2dRenderer::OnKeyPressed(Platform::String^ text)
 {
     char szUtf8[8] = {0};
     int nLen = WideCharToMultiByte(CP_UTF8, 0, (LPCWSTR)text->Data(), 1, szUtf8, sizeof(szUtf8), NULL, NULL);
     IMEDispatcher::sharedDispatcher()->dispatchInsertText(szUtf8, nLen);
 }
-
 
 void Cocos2dRenderer::OnCocos2dKeyEvent(Cocos2dKeyEvent event)
 {

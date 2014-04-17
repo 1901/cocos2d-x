@@ -46,9 +46,6 @@ public:
     void SetXamlMessageBoxDelegate(PhoneDirect3DXamlAppComponent::Cocos2dMessageBoxDelegate^ delegate);
     void SetXamlEditBoxDelegate(PhoneDirect3DXamlAppComponent::Cocos2dEditBoxDelegate^ delegate);
 
-	void OnPointerPressed(Windows::UI::Core::PointerEventArgs^ args);
-	void OnPointerMoved(Windows::UI::Core::PointerEventArgs^ args);
-	void OnPointerReleased(Windows::UI::Core::PointerEventArgs^ args);
     Windows::Foundation::IAsyncAction^ OnSuspending();
     void OnBackKeyPress();
     void Connect();
