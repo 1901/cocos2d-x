@@ -57,20 +57,26 @@ void Device::setAccelerometerEnabled(bool isEnabled)
 	if (isEnabled)
 	{
         sAccelerometer = Accelerometer::GetDefault();
+
+        if(sAccelerometer == nullptr)
+        {
+	        MessageBox("This device does not have an accelerometer.","Alert");
+            return;
+        }
+
 		setAccelerometerInterval(0.0f);
         sEnabled = true;
 
         sToken = sAccelerometer->ReadingChanged += ref new TypedEventHandler
 			<Accelerometer^,AccelerometerReadingChangedEventArgs^>
-			([](Accelerometer^, AccelerometerReadingChangedEventArgs^)
+			([](Accelerometer^ a, AccelerometerReadingChangedEventArgs^ e)
 		{
             if (!sEnabled)
             {
                 return;
             }
 
-            auto a = Accelerometer::GetDefault();
-			AccelerometerReading^ reading = a->GetCurrentReading();
+			AccelerometerReading^ reading = e->Reading;
             cocos2d::Acceleration acc;
 			acc.x = reading->AccelerationX;
 			acc.y = reading->AccelerationY;
@@ -108,8 +114,8 @@ void Device::setAccelerometerEnabled(bool isEnabled)
                 break;
             }
 #endif
-	        std::shared_ptr<cocos2d::InputEvent> e(new AccelerometerEvent(acc));
-            cocos2d::GLView::sharedOpenGLView()->QueueEvent(e);
+	        std::shared_ptr<cocos2d::InputEvent> event(new AccelerometerEvent(acc));
+            cocos2d::GLView::sharedOpenGLView()->QueueEvent(event);
 		});
 	}
 	else
