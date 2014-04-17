@@ -501,9 +501,6 @@
     <ClCompile Include="renderer\CCRenderer.cpp">
       <Filter>renderer</Filter>
     </ClCompile>
-    <ClCompile Include="renderer\CCRenderMaterial.cpp">
-      <Filter>renderer</Filter>
-    </ClCompile>
     <ClCompile Include="renderer\CCBatchCommand.cpp">
       <Filter>renderer</Filter>
     </ClCompile>
@@ -619,6 +616,10 @@
     <ClCompile Include="platform\winrt\inet_ntop_winrt.cpp">
       <Filter>platform</Filter>
     </ClCompile>
+    <ClCompile Include="platform\winrt\InputEvent.cpp">
+      <Filter>platform\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\physics\CCPhysicsBody.h">
@@ -1250,5 +1251,12 @@
     <ClInclude Include="platform\winrt\inet_ntop_winrt.h">
       <Filter>platform</Filter>
     </ClInclude>
+    <ClInclude Include="platform\winrt\InputEvent.h">
+      <Filter>platform\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="platform\winrt\InputEventTypes.h">
+      <Filter>platform\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h" />
   </ItemGroup>
 </Project>

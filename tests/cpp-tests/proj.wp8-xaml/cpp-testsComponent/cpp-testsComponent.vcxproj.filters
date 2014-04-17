@@ -812,7 +812,6 @@
     <ClCompile Include="..\..\..\..\cocos\2d\platform\wp8-xaml\cpp\Direct3DInterop.cpp" />
     <ClCompile Include="..\..\..\..\cocos\2d\platform\wp8-xaml\cpp\DirectXBase.cpp" />
     <ClCompile Include="..\..\..\..\cocos\2d\platform\wp8-xaml\cpp\EditBoxEvent.cpp" />
-    <ClCompile Include="..\..\..\..\cocos\2d\platform\wp8-xaml\cpp\InputEvent.cpp" />
     <ClCompile Include="..\..\Classes\ConfigurationTest\ConfigurationTest.cpp">
       <Filter>Classes\ConfigurationTest</Filter>
     </ClCompile>
@@ -1524,8 +1523,6 @@
     <ClInclude Include="..\..\..\..\cocos\2d\platform\wp8-xaml\cpp\DirectXBase.h" />
     <ClInclude Include="..\..\..\..\cocos\2d\platform\wp8-xaml\cpp\DirectXHelper.h" />
     <ClInclude Include="..\..\..\..\cocos\2d\platform\wp8-xaml\cpp\EditBoxEvent.h" />
-    <ClInclude Include="..\..\..\..\cocos\2d\platform\wp8-xaml\cpp\InputEvent.h" />
-    <ClInclude Include="..\..\..\..\cocos\2d\platform\wp8-xaml\cpp\InputEventTypes.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="..\..\Classes\ExtensionsTest\NetworkTest\HttpClientTest.h">
       <Filter>Classes\ExtensionsTest\NetworkTest</Filter>
