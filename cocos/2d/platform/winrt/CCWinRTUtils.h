@@ -27,7 +27,6 @@ THE SOFTWARE.
 #define __CCWINRT_UTILS_H__
 
 #include "CCPlatformMacros.h"
-#include "CCDictionary.h"
 
 #include <wrl/client.h>
 #include <ppl.h>
