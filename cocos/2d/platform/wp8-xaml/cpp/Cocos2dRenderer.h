@@ -47,7 +47,6 @@ public:
     void SetXamlEditBoxDelegate(PhoneDirect3DXamlAppComponent::Cocos2dEditBoxDelegate^ delegate);
 
     Windows::Foundation::IAsyncAction^ OnSuspending();
-    void OnBackKeyPress();
     void Connect();
     void Disconnect();
 

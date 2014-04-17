@@ -119,8 +119,7 @@ BackButtonEvent::BackButtonEvent()
 
 void BackButtonEvent::execute()
 {
-    CCASSERT(false, "BackButtonEvent::execute not implemented");
-    //renderer->OnBackKeyPress();
+    GLView::sharedOpenGLView()->OnBackKeyPress();
 }
 
 

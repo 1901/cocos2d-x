@@ -173,6 +173,14 @@ void GLView::OnResuming(Platform::Object^ sender, Platform::Object^ args)
 {
 }
 
+// user pressed the Back Key on the phone
+void GLView::OnBackKeyPress()
+{
+    if(m_delegate)
+    {
+        m_delegate->Invoke(Cocos2dEvent::TerminateApp);
+    }
+}
 
 void GLView::OnPointerPressed(CoreWindow^ sender, PointerEventArgs^ args)
 {
