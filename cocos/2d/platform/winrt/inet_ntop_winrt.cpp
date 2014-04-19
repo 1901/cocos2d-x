@@ -50,8 +50,11 @@
 #include <arpa/inet.h>
 #endif
 
+#if 0
 #define _MPRINTF_REPLACE /* use our functions only */
-#include <curl/mprintf.h>
+#include <curl/mprintf.h>  
+#endif // 0
+
 
 //#include "inet_ntop.h"
 
